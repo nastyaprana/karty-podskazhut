@@ -38,18 +38,25 @@ figure {
   margin: 0;
 }
 
-a:focus {
-  outline: none;
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
 }
 
-button:focus {
-  outline: none;
+a:focus-visible {
+  outline: 1px solid var(--text-color, #312a4e);
+
+}
+
+button:focus-visible {
+  outline: 1px solid var(--text-color, #312a4e);
 }
 
 .heading {
   font-family: var(--accent-font, "STIX Two Text"), sans-serif;
   text-align: center;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 90%;
 }
 
@@ -101,7 +108,6 @@ button:focus {
 .content__list {
   font-size: 18px;
   font-weight: 400;
-  list-style-type: none;
   padding-inline-start: 40px;
   padding-bottom: 11%;
   position: relative;
@@ -142,8 +148,8 @@ button:focus {
   padding: 0 4px;
 }
 
-.content__text-block_type_first-lettered
-  .theme_dark:first-of-type::first-letter {
+.theme_dark .content__text-block_type_first-lettered
+.content__paragraph:first-of-type::first-letter {
   background-color: transparent;
   border: 1px solid #b3b3b3;
 }
@@ -176,7 +182,6 @@ button:focus {
 }
 
 .content__card {
-  margin-top: 7%;
   text-align: center;
   aspect-ratio: 4/3;
   border: 1px solid currentColor;
@@ -184,6 +189,8 @@ button:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-block-start: 7%;
 }
 
 .content__card-title {
@@ -231,11 +238,10 @@ button:focus {
 .header__theme-toggler {
   display: flex;
   justify-content: flex-start;
-  list-style-type: none;
 }
 
 .header__theme-button_type_dark {
-  font-family: var(--main-font);
+  font-family: var(--main-font,Raleway), sans-serif;
   color: currentColor;
   font-size: 18px;
   font-weight: 400;
@@ -246,7 +252,7 @@ button:focus {
 }
 
 .header__theme-button_type_light {
-  font-family: var(--main-font);
+  font-family: var(--main-font, Raleway), sans-serif;
   color: var(--text-color, #312a4e);
   font-size: 18px;
   font-weight: 400;
@@ -288,7 +294,11 @@ button:focus {
 }
 
 .header__theme-button:focus-visible {
-  outline: 1px solid (--text-color, #312a4e);
+  outline: 1px solid var(--text-color, #312a4e);
+}
+
+.header__theme-button_is-active:hover {
+  text-decoration:none;
 }
 
 .header__theme-button:disabled {
@@ -303,15 +313,5 @@ button:focus {
 .footer__footer {
   font-size: 18px;
   line-height: 21px;
-  font-family: var(--main-font, Raleway);
-}
-
-.content__card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-block-start: 7%;
-  border: 1px solid currentColor;
-  aspect-ratio: 4/3;
+  font-family: var(--main-font, Raleway), sans-serif;
 }
