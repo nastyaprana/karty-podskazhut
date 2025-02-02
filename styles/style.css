@@ -46,7 +46,6 @@ ol {
 
 a:focus-visible {
   outline: 1px solid var(--text-color, #312a4e);
-
 }
 
 button:focus-visible {
@@ -148,8 +147,9 @@ button:focus-visible {
   padding: 0 4px;
 }
 
-.theme_dark .content__text-block_type_first-lettered
-.content__paragraph:first-of-type::first-letter {
+.theme_dark
+  .content__text-block_type_first-lettered
+  .content__paragraph:first-of-type::first-letter {
   background-color: transparent;
   border: 1px solid #b3b3b3;
 }
@@ -241,7 +241,7 @@ button:focus-visible {
 }
 
 .header__theme-button_type_dark {
-  font-family: var(--main-font,Raleway), sans-serif;
+  font-family: var(--main-font, Raleway), sans-serif;
   color: currentColor;
   font-size: 18px;
   font-weight: 400;
@@ -298,7 +298,7 @@ button:focus-visible {
 }
 
 .header__theme-button_is-active:hover {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .header__theme-button:disabled {
